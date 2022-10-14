@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"java18.jep413_Code_Snippets_in_Java_API_Documentation","l":"Demo"}];updateSearchResults();
