@@ -1,6 +1,6 @@
 package java18.jep420;
 
-public class demo {
+public class Demo {
 
 	public static void main(String[] args) {
 
