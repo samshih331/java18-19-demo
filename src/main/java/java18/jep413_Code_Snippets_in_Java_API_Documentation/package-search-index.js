@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"java18.jep413_Code_Snippets_in_Java_API_Documentation"}];updateSearchResults();

@@ -1,4 +1,4 @@
-package java18.jep408_simple_web_server;
+package java18.jep408;
 
 import java.io.BufferedReader;
 import java.io.IOException;

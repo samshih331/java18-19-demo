@@ -1,15 +1,20 @@
-package java18.jep400_utf8_default;
+package java18.jep400;
 
 import java.io.FileReader;
 
 public class Demo {
 
 	/*
-	Summary
 	Specify UTF-8 as the default charset of the standard Java APIs. With this change,
 	APIs that depend upon the default charset will behave consistently across all implementations,
 	operating systems, locales, and configurations.
 
+	In JDK 17 and earlier, the default charset is determined when the Java runtime starts. On macOS,
+	it is UTF-8 except in the POSIX C locale. On other operating systems,
+	it depends upon the user's locale and the default encoding, e.g.,
+	on Windows, it is a codepage-based charset such as windows-1252 or windows-31j.
+
+	Make Java programs more predictable and portable when their code relies on the default charset.
 	Several standard Java APIs use the default charset, including:
 
 	In the java.io package, InputStreamReader, FileReader, OutputStreamWriter, FileWriter,
@@ -25,9 +30,12 @@ public class Demo {
 
 		/*
 		 jdk8
-		 java -classpath C:\Users\SamShihT14\IdeaProject\java18-19-demo\target\classes java18.jep400_utf8_default.Demo
+		 cd C:\Users\SamShihT14\IdeaProject\java18-19-demo\src\main\java\java18\jep400
+		 javac .\Demo.java
+		 cd C:\Users\SamShihT14\IdeaProject\java18-19-demo\src\main\java
+		 java java18.jep400.Demo
 		 jdk19
-		 C:\Users\SamShihT14\.jdks\openjdk-19\bin\java.exe -classpath C:\Users\SamShihT14\IdeaProject\java18-19-demo\target\classes java18.jep400_utf8_default.Demo
+		 run this program
 		 */
 
 		try (FileReader fileReader = new FileReader(

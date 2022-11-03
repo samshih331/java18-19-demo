@@ -1,4 +1,4 @@
-package java18.JEP417_Vector_API;
+package java18.JEP417;
 
 import java.util.Arrays;
 

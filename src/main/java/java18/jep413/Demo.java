@@ -1,4 +1,4 @@
-package java18.jep413_Code_Snippets_in_Java_API_Documentation;
+package java18.jep413;
 
 public class Demo {
 
