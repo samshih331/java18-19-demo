@@ -23,6 +23,9 @@ public class Demo {
 	Provide a command-line tool to start a minimal web server that serves static files only.
 	No CGI or servlet-like functionality is available. This tool will be useful for prototyping,
 	ad-hoc coding, and testing purposes, particularly in educational contexts.
+
+	command line tool
+	C:\Users\SamShihT14\.jdks\openjdk-19\bin\jwebserver.exe -d C:\Users\SamShihT14\IdeaProject\CPS\CPS-H5\dist
 	 */
 
 	public static void main(String[] args) throws IOException {
@@ -32,8 +35,7 @@ public class Demo {
 		 */
 
 		HttpServer fileServer = SimpleFileServer.createFileServer(new InetSocketAddress(8080),
-			Path.of("C:\\Users\\SamShihT14\\IdeaProject\\CPS\\CPS-H5\\dist"),
-			SimpleFileServer.OutputLevel.VERBOSE);
+			Path.of("C:\\Users\\SamShihT14\\IdeaProject\\CPS\\CPS-H5\\dist"), SimpleFileServer.OutputLevel.VERBOSE);
 
 		fileServer.start();
 
@@ -41,47 +43,47 @@ public class Demo {
 		A customized file-server handler can be added to an existing server:
 		 */
 
-		//		HttpServer httpServer = HttpServer.create(new InetSocketAddress(8080), 10, "/store/", exchange -> {
-		//			try {
-		//				StringBuilder stringBuilder = new StringBuilder();
-		//				stringBuilder.append("request method: ").append(exchange.getRequestMethod()).append("<br/>");
-		//				stringBuilder.append("request param: ").append(getRequestParam(exchange)).append("<br/>");
-		//				stringBuilder.append("request header: <br/> ").append(getRequestHeader(exchange)).append("<br/>");
-		//				handleResponse(exchange, stringBuilder.toString());
-		//			} catch (Exception e) {
-		//				e.printStackTrace();
-		//			}
-		//		});
-		//
-		//		HttpHandler fileHandler = SimpleFileServer.createFileHandler(
-		//			Path.of("C:\\Users\\SamShihT14\\IdeaProject\\java18-19-demo\\src\\main\\resources"));
-		//
-		//		httpServer.createContext("/browse/", fileHandler);
-		//		httpServer.start();
+//		HttpServer httpServer = HttpServer.create(new InetSocketAddress(8080), 10, "/store/", exchange -> {
+//			try {
+//				StringBuilder stringBuilder = new StringBuilder();
+//				stringBuilder.append("request method: ").append(exchange.getRequestMethod()).append("<br/>");
+//				stringBuilder.append("request param: ").append(getRequestParam(exchange)).append("<br/>");
+//				stringBuilder.append("request header: <br/> ").append(getRequestHeader(exchange)).append("<br/>");
+//				handleResponse(exchange, stringBuilder.toString());
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		});
+//
+//		HttpHandler fileHandler = SimpleFileServer.createFileHandler(
+//			Path.of("C:\\Users\\SamShihT14\\IdeaProject\\java18-19-demo\\src\\main\\resources"));
+//
+//		httpServer.createContext("/browse/", fileHandler);
+//		httpServer.start();
 
 		/*
 		A customized output filter can be added to a server during creation:
 		 */
 
-		//		Filter outputFilter = SimpleFileServer.createOutputFilter(System.out, SimpleFileServer.OutputLevel.INFO);
+		//				Filter outputFilter = SimpleFileServer.createOutputFilter(System.out, SimpleFileServer.OutputLevel.INFO);
 		//
-		//		HttpServer httpServer = HttpServer.create(new InetSocketAddress(8080), 10, "/store/", exchange -> {
-		//			try {
-		//				StringBuilder stringBuilder = new StringBuilder();
-		//				stringBuilder.append("request method: ").append(exchange.getRequestMethod()).append("<br/>");
-		//				stringBuilder.append("request param: ").append(getRequestParam(exchange)).append("<br/>");
-		//				stringBuilder.append("request header: <br/> ").append(getRequestHeader(exchange)).append("<br/>");
-		//				handleResponse(exchange, stringBuilder.toString());
-		//			} catch (Exception e) {
-		//				e.printStackTrace();
-		//			}
-		//		}, outputFilter);
+		//				HttpServer httpServer = HttpServer.create(new InetSocketAddress(8080), 10, "/store/", exchange -> {
+		//					try {
+		//						StringBuilder stringBuilder = new StringBuilder();
+		//						stringBuilder.append("request method: ").append(exchange.getRequestMethod()).append("<br/>");
+		//						stringBuilder.append("request param: ").append(getRequestParam(exchange)).append("<br/>");
+		//						stringBuilder.append("request header: <br/> ").append(getRequestHeader(exchange)).append("<br/>");
+		//						handleResponse(exchange, stringBuilder.toString());
+		//					} catch (Exception e) {
+		//						e.printStackTrace();
+		//					}
+		//				}, outputFilter);
 		//
-		//		HttpHandler fileHandler = SimpleFileServer.createFileHandler(
-		//			Path.of("C:\\Users\\SamShihT14\\IdeaProject\\java18-19-demo\\src\\main\\resources"));
+		//				HttpHandler fileHandler = SimpleFileServer.createFileHandler(
+		//					Path.of("C:\\Users\\SamShihT14\\IdeaProject\\java18-19-demo\\src\\main\\resources"));
 		//
-		//		httpServer.createContext("/browse/", fileHandler);
-		//		httpServer.start();
+		//				httpServer.createContext("/browse/", fileHandler);
+		//				httpServer.start();
 	}
 
 	private static void handleResponse(HttpExchange httpExchange, String respnseText) throws Exception {
