@@ -10,7 +10,6 @@ public class Demo {
 	 C:\Users\SamShihT14\.jdks\openjdk-19\bin\javadoc.exe .\Demo.java
 	 */
 
-
 	/**
 	 * <pre>{@code
 	 * int sum = widgets.stream()
@@ -19,8 +18,7 @@ public class Demo {
 	 * .sum();
 	 * }</pre>
 	 */
-	public void test1() {
-
+	public void beforeJava18() {
 	}
 
 	/**
@@ -31,8 +29,7 @@ public class Demo {
 	 * .sum();
 	 *}
 	 */
-	public void test2() {
-
+	public void codeSnippets() {
 	}
 
 	/**
@@ -43,8 +40,7 @@ public class Demo {
 	 * }
 	 *}
 	 */
-	public void test3() {
-
+	public void inlineSnippets() {
 	}
 
 	/**
@@ -57,7 +53,7 @@ public class Demo {
 	 * }
 	 *}
 	 */
-	public void test5() {
+	public void highlighting() {
 
 	}
 
@@ -72,8 +68,7 @@ public class Demo {
 	 *   }
 	 *}
 	 */
-	public void test6() {
-
+	public void highlighting2() {
 	}
 
 	/**
@@ -86,8 +81,7 @@ public class Demo {
 	 * }
 	 *}
 	 */
-	public void test7() {
-
+	public void modifyingTheDisplayedText() {
 	}
 
 	/**
@@ -100,7 +94,7 @@ public class Demo {
 	 * }
 	 *}
 	 */
-	public void test8() {
+	public void linkingText() {
 
 	}
 
